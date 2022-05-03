@@ -10,7 +10,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <h1 class="heachone bg-danger my-1 text-light">THE TOP HEADLINES</h1>
+        <h1 class="heachone bg-danger p-2 my-1 text-light">THE TOP HEADLINES</h1>
     </div>
     {% for title,desc,img_url,p_date,url in contents %}
     <div class="card my-5">
@@ -34,7 +34,7 @@
     {% endfor %}
 
     <div class="row">
-        <h2 class="heachone">TODAY'S NEWS</h2>
+        <h2 class="heachone bg-dark p-2 text-light">TODAY'S NEWS</h2>
     </div>
     {% for title,desc,img_url,p_date,url in all %}
     <div class="card my-5">
@@ -49,9 +49,9 @@
                     <a href="{{url}}"><h2>{{title}}</h2></a>
                     <a href="{{url}}"><p>{{desc}}</p></a>
                 </div>
-            </div>
-            <div class="card-footer bg-dark text-light text-center">
-                <p>Publish Date:{{p_date}}</p>
+                <div class="card-footer bg-danger text-light text-center">
+                    <p>Publish Date:{{p_date}}</p>
+                </div>
             </div>
         </div>
     </div>
