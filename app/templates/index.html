@@ -1,9 +1,15 @@
 {% extends 'bootstrap/base.html'%}
 
+
+{% block styles%}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+{% endblock %}
+
+
 {% block content %}
 <div class="container">
     <div class="row">
-        <h1 class="text-center">THE TOP HEADLINES</h1>
+        <h1 class="heachone">THE TOP HEADLINES</h1>
     </div>
     {% for title,desc,img_url,p_date,url in contents %}
     <div class="container-fluid">
@@ -15,7 +21,9 @@
     </div>
     {% endfor %}
 
-    <h2>TODAY'S NEWS</h2>
+    <div class="row">
+        <h2 class="heachone">TODAY'S NEWS</h2>
+    </div>
     {% for title,desc,img_url,p_date,url in all %}
     <div class="container-fluid">
         <div class="item"><a href="{{url}}"><img src="{{img_url}}" alt=""></a></div>
