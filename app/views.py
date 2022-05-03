@@ -14,9 +14,17 @@ def index():
     #top headline news
     top_headlines = newsapi.get_top_headlines(sources='bbc-news')
 
+    #all main articles
+    all_articles = newsapi.get_everything(sources='bbc-news')
+
 
     #fetching all articles of top eadline news
     t_articles = top_headlines['articles']
+
+
+    #fetching all articles of all news articles
+    a_articles = all_articles['articles']
+
 
     #making a list of contents to store the values on that list
     news = []
@@ -36,9 +44,29 @@ def index():
         p_date.append(main_articles['publishedAt'])
         url.append(main_articles['url'])
 
+
+    #making a list of contents to store the values on that list
+    news_all = []
+    desc_all = []
+    image_url_all = []
+    p_date_all = []
+    url_all = []
+
+    #fetch all the contents of articles by looping
+    for i in range(len(t_articles)):
+        a_articles = a_articles[i]
+
+        #appending contents into each list
+        news_all.append(main_articles['title'])
+        desc_all.append(main_articles['description'])
+        image_url_all.append(main_articles['urlToImage'])
+        p_date_all.append(main_articles['publishedAt'])
+        url_all.append(main_articles['url'])
+
         
         #making a zip for finding contents directly and shortly
         contents = zip(news,desc,image_url,p_date,url)
+        all = zip(news_all,desc_all,image_url_all,p_date_all,url_all)
 
 
-    return render_template('index.html', contents=contents)
+    return render_template('index.html', contents=contents,all=all)
