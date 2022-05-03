@@ -18,6 +18,12 @@ def index():
     #fetching all articles of top eadline news
     t_articles = top_headlines['articles']
 
+    #making a list of contents to store the values on that list
+    news = []
+    desc = []
+    image_url = []
+    p_date = []
+    url = []
 
 
     return render_template('index.html')
