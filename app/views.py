@@ -11,6 +11,13 @@ def index():
     '''
     newsapi = NewsApiClient(api_key='0ea4e8f58b09419abc487cf7d995bfc9')
 
+    #top headline news
+    top_headlines = newsapi.get_top_headlines(sources='bbc-news')
+
+
+    #fetching all articles of top eadline news
+    t_articles = top_headlines['articles']
+
 
 
     return render_template('index.html')
