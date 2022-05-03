@@ -13,6 +13,17 @@
     </div>
     {% endfor %}
 
+    <h2>TODAY'S NEWS</h2>
+    {% for title,desc,img_url,p_date,url in all %}
+    <div class="container-fluid">
+        <div class="item"><a href="{{url}}"><img src="{{img_url}}" alt=""></a></div>
+        <div><a href="{{url}}"><h2>{{title}}</h2></a></div>
+        <div><a href="{{url}}"><p>{{desc}}</p></a></div>
+        <div><p>Publish Date:{{p_date}}</p></div>
+
+    </div>
+    {% endfor %}
+
 
 </div>
 
