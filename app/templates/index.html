@@ -5,17 +5,12 @@
     </div>
     {% for title,desc,img_url,p_date,url in contents %}
     <div class="container-fluid">
-        <div class="item"><a href="{{url}}"><img src="{{img_url}}" alt=""></a>
-
-        </div>
+        <div class="item"><a href="{{url}}"><img src="{{img_url}}" alt=""></a></div>
+        <div><a href="{{url}}"><h2>{{title}}</h2></a></div>
+        <div><a href="{{url}}"><p>{{desc}}</p></a></div>
+        <div><p>Publish Date:{{p_date}}</p></div>
 
     </div>
-
-
-
-
-
-
     {% endfor %}
 
 
