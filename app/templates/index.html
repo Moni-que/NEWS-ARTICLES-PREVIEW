@@ -1,8 +1,22 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <h1>NEWS APP</h1>
+        <h1 class="text-center">THE TOP HEADLINES</h1>
     </div>
+    {% for title,desc,img_url,p_date,url in contents %}
+    <div class="container-fluid">
+        <div class="item"><a href="{{url}}"><img src="{{img_url}}" alt=""></a>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    {% endfor %}
 
 
 </div>
