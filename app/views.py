@@ -36,6 +36,9 @@ def index():
         p_date.append(main_articles['publishedAt'])
         url.append(main_articles['url'])
 
+        
+        #making a zip for finding contents directly and shortly
+        contents = zip(news,desc,image_url,p_date,url)
 
 
-    return render_template('index.html')
+    return render_template('index.html', contents=contents)
