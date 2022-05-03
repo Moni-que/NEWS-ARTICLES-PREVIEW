@@ -25,5 +25,11 @@ def index():
     p_date = []
     url = []
 
+    #fetch all the contents of articles by looping
+    for i in range(len(t_articles)):
+        main_articles = t_articles[i]
+
+
+
 
     return render_template('index.html')
