@@ -53,15 +53,15 @@ def index():
     url_all = []
 
     #fetch all the contents of articles by looping
-    for i in range(len(t_articles)):
-        a_articles = a_articles[i]
+    for i in range(len(a_articles)):
+        a_article = a_articles[i]
 
         #appending contents into each list
-        news_all.append(main_articles['title'])
-        desc_all.append(main_articles['description'])
-        image_url_all.append(main_articles['urlToImage'])
-        p_date_all.append(main_articles['publishedAt'])
-        url_all.append(main_articles['url'])
+        news_all.append(a_article['title'])
+        desc_all.append(a_article['description'])
+        image_url_all.append(a_article['urlToImage'])
+        p_date_all.append(a_article['publishedAt'])
+        url_all.append(a_article['url'])
 
         
         #making a zip for finding contents directly and shortly
