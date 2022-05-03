@@ -14,15 +14,21 @@
     </div>
     {% for title,desc,img_url,p_date,url in contents %}
     <div class="card my-5">
-        <div class="card-title">
-            <a href="{{url}}"><img src="{{img_url}}" alt=""></a>
-        </div>
-        <div class="card-body">
-            <a href="{{url}}"><h2>{{title}}</h2></a>
-            <a href="{{url}}"><p>{{desc}}</p></a>
-        </div>
-        <div class="card-footer bg-dark text-light text-center">
-            <p>Publish Date:{{p_date}}</p>
+        <div class="row">
+            <div class="col">
+                <div class="card-title">
+                    <a href="{{url}}"><img src="{{img_url}}" alt=""></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-body">
+                    <a href="{{url}}"><h2>{{title}}</h2></a>
+                    <a href="{{url}}"><p>{{desc}}</p></a>
+                </div>
+            </div>
+            <div class="card-footer bg-dark text-light text-center">
+                <p>Publish Date:{{p_date}}</p>
+            </div>
         </div>
     </div>
     {% endfor %}
@@ -32,15 +38,21 @@
     </div>
     {% for title,desc,img_url,p_date,url in all %}
     <div class="card my-5">
-        <div class="card-title">
-            <a href="{{url}}"><img src="{{img_url}}" alt=""></a>
-        </div>
-        <div class="card-body">
-            <a href="{{url}}"><h2>{{title}}</h2></a>
-            <a href="{{url}}"><p>{{desc}}</p></a>
-        </div>
-        <div class="card-footer bg-dark text-light text-center">
-            <p>Publish Date:{{p_date}}</p>
+        <div class="row">
+            <div class="col">
+                <div class="card-title">
+                    <a href="{{url}}"><img src="{{img_url}}" alt=""></a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card-body">
+                    <a href="{{url}}"><h2>{{title}}</h2></a>
+                    <a href="{{url}}"><p>{{desc}}</p></a>
+                </div>
+            </div>
+            <div class="card-footer bg-dark text-light text-center">
+                <p>Publish Date:{{p_date}}</p>
+            </div>
         </div>
     </div>
     {% endfor %}
