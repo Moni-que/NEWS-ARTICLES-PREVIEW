@@ -2,7 +2,7 @@
 
 ### By Monicah Maina
 
-##screenshot of the Application
+## screenshot of the Application
 ![Screenshot from 2022-05-09 05-43-43](https://user-images.githubusercontent.com/93192319/167331851-8bacbc11-ad39-465a-98c7-e542ae26cc75.png)
 
 ## Table Of content
